@@ -1,16 +1,14 @@
-# react-native-qrcode
-A react-native component to generate [QRcode](http://en.wikipedia.org/wiki/QR_code), not only support English.
+# react-native-qrcode-image
+A react-native component to generate [QRcode](http://en.wikipedia.org/wiki/QR_code), using only images (no Webview needed)
 
 ## Installation
 ```sh
-npm install react-native-qrcode --save
+npm install react-native-qrcode-image --save
 ```
 ## Usage
 ```jsx
-'use strict';
-
 import React, { Component } from 'react'
-import QRCode from 'react-native-qrcode';
+import QRCode from 'react-native-qrcode-image';
 
 import {
     AppRegistry,
@@ -35,8 +33,8 @@ class HelloWorld extends Component {
         <QRCode
           value={this.state.text}
           size={200}
-          bgColor='purple'
-          fgColor='white'/>
+          bgColor='#FFFFFF'
+          fgColor='#000000'/>
       </View>
     );
   };
@@ -66,15 +64,15 @@ module.exports = HelloWorld;
 ```
 ## Available Props
 
-prop      | type                 | default value
-----------|----------------------|--------------
-`value`   | `string`             | `http://facebook.github.io/react-native/`
-`size`    | `number`             | `128`
-`bgColor` | `string` (CSS color) | `"#000"`
-`fgColor` | `string` (CSS color) | `"#FFF"`
+prop      | type                               | default value
+----------|------------------------------------|--------------
+`value`   | `string`                           | `http://facebook.github.io/react-native/`
+`size`    | `number`                           | `128`
+`bgColor` | `string` (CSS color in hex format) | `'#000000'`
+`fgColor` | `string` (CSS color in hex format) | `'#FFFFFF'`
 
 <img src='qrcode.png' height = '256' width = '256'/>
 
 # Licenses
 
-All source code is licensed under the [MIT License](https://github.com/cssivision/react-native-qrcode/blob/master/LICENSE).
+All source code is licensed under the [MIT License](https://github.com/dvdbng/react-native-qrcode-image/blob/master/LICENSE).
